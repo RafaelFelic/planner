@@ -1,0 +1,36 @@
+.schedule {
+  min-width: 100%;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  padding: 10px;
+  background-color: #eee;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  color: #333;
+}
+
+.schedule h2 {
+  padding: 10px;
+  font-weight: 500;
+}
+
+.schedule li {
+  padding: 1px;
+  display: flex;
+  list-style-type: none;
+  font-size: 14pt;
+  border-bottom: 1px solid #c2c2c2;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+
+.schedule li input {
+  background-color: #eee;
+  flex-grow: 1; /* Permitindo que o input cresça */
+  margin-left: 10px;
+  border: none;
+  font-size: 14pt;
+}

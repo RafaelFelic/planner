@@ -1,0 +1,161 @@
+@media screen and (max-width: 768px) {
+  body {
+    overflow-y: hidden;
+  }
+  .container {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding-top: 0;
+  }
+
+  .todolist,
+  .notes,
+  .schedule {
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 1);
+    height: 75vh;
+    min-width: calc(100% - 20px);
+    flex: 0 0 calc(100% - 20px);
+    margin: 10px;
+    overflow-x: hidden;
+  }
+
+  .todolist {
+    position: relative;
+    align-content: start;
+    justify-content: center;
+    /* overflow: auto; */
+  }
+
+  form {
+    transform: scale(0.67);
+  }
+
+  .column {
+    margin: 0;
+  }
+
+  /* form {
+    flex-direction: column;
+    min-width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  form h1 {
+    width: 30%;
+    margin-left: 25px;
+  }
+
+  form input {
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: none;
+  }
+
+  form button {
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: none;
+    color: white;
+    background: #db4c3f;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  form button:hover {
+    background: white;
+    color: #db4c3f;
+  }
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    color: #db4c3f;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+  }
+
+  .select {
+    display: flex;
+    margin: 0.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .select::after {
+    content: '\25BC';
+    background: #db4c3f;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+
+  .select:hover::after {
+    background: #fff;
+    color: #db4c3f;
+  } */
+
+  .todo {
+    width: 280px; /* Por exemplo, ajustar a largura dos itens da lista */
+    font-size: 1.2rem;
+  }
+
+  #weather {
+    font-size: 1.2rem;
+  }
+
+  #date {
+    margin-right: 0;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .info {
+    flex-direction: column; /* Organiza o conteúdo verticalmente */
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    padding: 0.5rem; /* Reduz o preenchimento */
+  }
+  /* 
+  .info {
+    justify-content: space-evenly;
+    padding: 0.5rem;
+    position: fixed;
+    bottom: 38px;
+    width: 100%;
+    z-index: 1000;
+  } */
+  .info {
+    bottom: 35px;
+    padding: 0.4rem;
+    line-height: 1.5rem;
+  }
+
+  .rate,
+  .btc {
+    font-size: 0.9rem;
+    color: lightgreen;
+    letter-spacing: 0.01rem;
+    /* margin-bottom: 5px; */
+    margin: auto;
+  }
+
+  .clock {
+    display: none;
+  }
+
+  .btc::before {
+    font-size: 0.8rem;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Meow+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/notes.css" />
+    <link rel="stylesheet" href="/styles/schedule.css" />
+    <link rel="stylesheet" href="/styles/utils.css" />
+    <link rel="stylesheet" href="/styles/todolist.css" />
+    <link rel="stylesheet" href="/styles/layout/responsive.css" />
+    <script defer src="/src/App.js" type="module"></script>
+    <title>Planner</title>
+  </head>
+  <body>
+    <header>
+      <h1>PLANNER</h1>
+      <div id="weatherDate">
+        <div id="weather"></div>
+        <div id="date"></div>
+      </div>
+    </header>
+    <main class="container">
+      <section class="todolist">
+        <div class="form">
+          <form>
+            <h1>To Do List</h1>
+            <input
+              type="text"
+              id="new"
+              placeholder="Add a new task..."
+              autocomplete="off"
+            />
+            <button id="add"><i class="fas fa-plus-square"></i></button>
+            <div class="select">
+              <select name="todos" class="filter">
+                <option value="all">All</option>
+                <option value="completed">Done</option>
+                <option value="uncompleted">In Progress...</option>
+              </select>
+            </div>
+          </form>
+        </div>
+        <div class="column"></div>
+      </section>
+      <section class="schedule">
+        <h2>Plans & Schedules</h2>
+        <ul id="schedule-list"></ul>
+      </section>
+      <section class="notes">
+        <label for="textnotes">Notes</label>
+        <textarea spellcheck="false" id="textnotes" class="textarea"></textarea>
+      </section>
+    </main>
+    <aside class="info">
+      <div class="rate"></div>
+      <div class="btc"></div>
+      <div class="clock"></div>
+    </aside>
+    <footer>
+      <p class="copyright"
+        >&copy; 2023
+        <a class="email" target="_blank" href="mailto:rafaelfelic@gmail.com"
+          >Rafael Feliciano</a
+        >. Innovating solutions</p
+      >
+    </footer>
+  </body>
+</html>
