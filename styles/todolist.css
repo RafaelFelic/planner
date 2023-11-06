@@ -1,12 +1,14 @@
 .todolist {
   display: flex;
   flex-wrap: wrap;
+  flex: 1;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: #2f4258;
   border-radius: 15px;
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
-  align-self: start;
-  justify-content: space-evenly;
+  position: relative;
+  align-content: start;
+  justify-content: center;
   overflow: auto;
 }
 
@@ -15,7 +17,10 @@
 }
 
 .form {
-  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: inherit;
 }
 
 form {
@@ -23,7 +28,8 @@ form {
   width: 100%;
   justify-content: center;
   align-items: center;
-  margin-top: 15px;
+  margin-top: 25px;
+  margin-bottom: 50px;
 }
 
 form h1 {
@@ -35,6 +41,7 @@ form input {
   padding: 1rem;
   font-size: 1.2rem;
   border: none;
+  border-radius: none;
 }
 
 form button {

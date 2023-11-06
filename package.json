@@ -2,11 +2,15 @@
   "name": "planner-app",
   "version": "1.0.0",
   "description": "Planner including ToDo List, Schedule and Notes",
-  "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node src/App.js"
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "author": "Rafael Feliciano",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/reporter-dev-server": "^2.10.1",
+    "parcel": "^2.10.1"
+  }
 }

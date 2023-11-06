@@ -1,149 +1,170 @@
 @media screen and (max-width: 768px) {
+  html,
   body {
-    overflow-y: hidden;
+    height: 100%;
+    overflow: hidden;
   }
+
+  .header-fix {
+    display: none;
+  }
+
   .container {
     display: flex;
-    overflow-x: auto;
-    gap: 15px;
-    padding-top: 0;
+    grid-template-columns: none;
+    grid-template-rows: none;
+    height: 80%;
+    padding: 0 10px;
+    overflow-y: auto;
+    scroll-snap-type: x mandatory;
   }
 
   .todolist,
   .notes,
   .schedule {
+    max-height: 90%;
+    overflow-y: auto;
     border-radius: 10px;
     box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 1);
-    height: 75vh;
-    min-width: calc(100% - 20px);
-    flex: 0 0 calc(100% - 20px);
-    margin: 10px;
-    overflow-x: hidden;
+    min-width: 100%;
+    margin: 0;
   }
 
   .todolist {
     position: relative;
     align-content: start;
     justify-content: center;
-    /* overflow: auto; */
-  }
-
-  form {
-    transform: scale(0.67);
   }
 
   .column {
-    margin: 0;
+    margin: auto;
   }
 
-  /* form {
-    flex-direction: column;
-    min-width: 100%;
-    justify-content: center;
-    align-items: center;
+  form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
     margin-top: 15px;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
   }
 
   form h1 {
-    width: 30%;
-    margin-left: 25px;
+    width: 100%;
+    font-weight: 500;
   }
 
   form input {
-    padding: 1rem;
-    font-size: 1.2rem;
-    border: none;
+    padding: 0.5rem;
+    font-size: 1rem;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    /* -webkit-appearance: none; */
+    border-radius: 0;
   }
 
   form button {
-    padding: 1rem;
-    font-size: 1.2rem;
-    border: none;
-    color: white;
-    background: #db4c3f;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    padding: 6px;
   }
 
-  form button:hover {
-    background: white;
-    color: #db4c3f;
-  }
-
-  select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    outline: none;
-    border: none;
-    color: #db4c3f;
-    width: 10rem;
-    cursor: pointer;
-    padding: 1rem;
+  input {
+    width: 54%;
+    margin-left: 9px;
   }
 
   .select {
-    display: flex;
-    margin: 0.5rem;
-    position: relative;
-    overflow: hidden;
+    width: 30%;
+  }
+
+  .filter {
+    text-align: center;
+    padding: 3px;
   }
 
   .select::after {
-    content: '\25BC';
-    background: #db4c3f;
-    padding: 1rem;
-    pointer-events: none;
-    transition: all 0.3s ease;
+    padding: 0.5rem;
   }
-
-  .select:hover::after {
-    background: #fff;
-    color: #db4c3f;
-  } */
 
   .todo {
-    width: 280px; /* Por exemplo, ajustar a largura dos itens da lista */
+    height: 35px;
+    width: 300px;
+    font-size: 1.1rem;
+  }
+
+  .calendar-container {
+    display: none;
+    position: fixed;
+    top: 91px;
+    left: 10px;
+    background-color: #2f4258;
+    color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+  }
+
+  .weather {
     font-size: 1.2rem;
   }
 
-  #weather {
-    font-size: 1.2rem;
-  }
-
-  #date {
+  .date {
     margin-right: 0;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 600;
     color: #333;
   }
 
-  .info {
-    flex-direction: column; /* Organiza o conteúdo verticalmente */
-    align-items: flex-start; /* Alinha os itens à esquerda */
-    padding: 0.5rem; /* Reduz o preenchimento */
+  .slide {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    /* width: 100vw; */
   }
-  /* 
+
+  .slide-controls {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo branco semi-transparente */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra leve para destacar */
+    z-index: 1;
+  }
+
+  .dot {
+    height: 5px;
+    width: 5px;
+    margin: 0 5px;
+    background-color: #a1a1a1; /* Cor dos pontos */
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.2s;
+  }
+
+  .dot.active {
+    background-color: #fff; /* Cor dos pontos ao passar o mouse */
+    transform: scale(1.6);
+  }
+
   .info {
-    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: flex-start;
     padding: 0.5rem;
-    position: fixed;
-    bottom: 38px;
-    width: 100%;
-    z-index: 1000;
-  } */
-  .info {
-    bottom: 35px;
-    padding: 0.4rem;
     line-height: 1.5rem;
+    bottom: 30px;
   }
 
   .rate,
   .btc {
     font-size: 0.9rem;
     color: lightgreen;
-    letter-spacing: 0.01rem;
-    /* margin-bottom: 5px; */
+    letter-spacing: 0.001rem;
     margin: auto;
   }
 
@@ -152,10 +173,15 @@
   }
 
   .btc::before {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   footer {
     font-size: 12px;
+  }
+
+  footer p {
+    background: none;
+    padding: 7px;
   }
 }

@@ -153,4 +153,6 @@ class Todolist {
   }
 }
 
-export default Todolist;
+const todolist = new Todolist();
+
+export default todolist;

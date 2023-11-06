@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Planner App" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,6 +18,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <link rel="icon" href="/src/planner.ico?v=2" type="image/x-icon" />
     <link rel="stylesheet" href="/styles/main.css" />
     <link rel="stylesheet" href="/styles/notes.css" />
     <link rel="stylesheet" href="/styles/schedule.css" />
@@ -30,12 +32,12 @@
     <header>
       <h1>PLANNER</h1>
       <div id="weatherDate">
-        <div id="weather"></div>
-        <div id="date"></div>
+        <div class="weather"></div>
+        <div class="date"></div>
       </div>
     </header>
     <main class="container">
-      <section class="todolist">
+      <section class="todolist slide">
         <div class="form">
           <form>
             <h1>To Do List</h1>
@@ -57,26 +59,46 @@
         </div>
         <div class="column"></div>
       </section>
-      <section class="schedule">
-        <h2>Plans & Schedules</h2>
+      <section class="schedule slide">
+        <div class="header">
+          <h2>Plans & Schedules</h2>
+          <div class="calendar">
+            <i class="fa fa-calendar-alt" aria-hidden="true"></i>
+            <div id="current-date"></div>
+          </div>
+          <div class="settings">
+            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+          </div>
+        </div>
         <ul id="schedule-list"></ul>
+        <div id="calendar-container" class="calendar-container"></div>
       </section>
-      <section class="notes">
-        <label for="textnotes">Notes</label>
-        <textarea spellcheck="false" id="textnotes" class="textarea"></textarea>
+      <section class="notes slide">
+        <div class="notes-header">
+          <h2>Notes</h2>
+          <button id="add-note" class="add-note-btn"
+            ><i class="fas fa-plus"></i
+          ></button>
+        </div>
+        <div class="notes-list"></div>
       </section>
     </main>
-    <aside class="info">
-      <div class="rate"></div>
-      <div class="btc"></div>
-      <div class="clock"></div>
-    </aside>
+    <div class="slide-controls">
+      <span class="dot" onclick="slideController.setCurrentSlide(1)"></span>
+      <span class="dot" onclick="slideController.setCurrentSlide(2)"></span>
+      <span class="dot" onclick="slideController.setCurrentSlide(3)"></span>
+    </div>
     <footer>
+      <div class="info">
+        <div class="rate"></div>
+        <div class="btc"></div>
+        <div class="clock"></div>
+      </div>
       <p class="copyright"
         >&copy; 2023
         <a class="email" target="_blank" href="mailto:rafaelfelic@gmail.com"
           >Rafael Feliciano</a
-        >. Innovating solutions</p
+        ></p
       >
     </footer>
   </body>

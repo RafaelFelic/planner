@@ -37,6 +37,9 @@ class Info {
         `https://api.apilayer.com/exchangerates_data/latest?symbols=AUD%2CUSD&base=BRL`,
         requestOptions
       );
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
       const data = await response.json();
       const rateAUD = 1 / data.rates.AUD;
       const rateUSD = 1 / data.rates.USD;

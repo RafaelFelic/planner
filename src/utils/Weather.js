@@ -34,12 +34,12 @@ class Weather {
       console.log(data);
       console.log(data.main.temp);
 
-      const weat = document.querySelector('#weather');
+      const weat = document.querySelector('.weather');
       weat.insertAdjacentHTML(
         'beforeend',
         `${data.name} ${Math.round(
           data.main.temp - 273.15
-        )}°C <img src="http://openweathermap.org/img/w/${
+        )}°C <img src="https://openweathermap.org/img/w/${
           data.weather[0].icon
         }.png"></img>`
       );
