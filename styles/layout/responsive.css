@@ -2,7 +2,7 @@
   html,
   body {
     height: 100svh;
-    /* overflow: hidden; */
+    overflow: hidden;
   }
 
   .header-fix {
@@ -22,7 +22,7 @@
   .todolist,
   .notes,
   .schedule {
-    max-height: 70%;
+    max-height: 72%;
     overflow-y: auto;
     border-radius: 10px;
     box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 1);
