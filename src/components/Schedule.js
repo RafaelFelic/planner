@@ -77,6 +77,7 @@ class Schedule {
         });
         input.addEventListener('blur', () => {
           document.querySelector('.header').style.position = 'sticky';
+          document.querySelector('.header').style.top = '0';
         });
 
         const id = `${hour.toString().padStart(2, '0')}${minute
