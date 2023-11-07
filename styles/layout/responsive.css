@@ -15,7 +15,6 @@
     grid-template-rows: none;
     height: 80%;
     padding: 0 10px;
-    margin-bottom: 60px;
     overflow-y: auto;
     scroll-snap-type: x mandatory;
   }
@@ -28,6 +27,7 @@
     border-radius: 10px;
     box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 1);
     min-width: 100%;
+    padding-bottom: 160px;
     margin: 0;
   }
 
