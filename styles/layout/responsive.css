@@ -1,8 +1,8 @@
 @media screen and (max-width: 768px) {
   html,
   body {
-    height: 100dvh;
-    overflow: hidden;
+    height: 100svh;
+    /* overflow: hidden; */
   }
 
   .header-fix {
@@ -13,7 +13,7 @@
     display: flex;
     grid-template-columns: none;
     grid-template-rows: none;
-    height: 80%;
+    height: 100%;
     padding: 0 10px;
     overflow-y: auto;
     scroll-snap-type: x mandatory;
@@ -22,7 +22,7 @@
   .todolist,
   .notes,
   .schedule {
-    max-height: 90%;
+    max-height: 70%;
     overflow-y: auto;
     border-radius: 10px;
     box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 1);

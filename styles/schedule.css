@@ -1,6 +1,5 @@
 .schedule {
   position: relative;
-  margin-top: 60px;
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 1;
