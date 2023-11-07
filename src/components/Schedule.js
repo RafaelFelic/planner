@@ -75,6 +75,9 @@ class Schedule {
         input.addEventListener('focus', () => {
           document.querySelector('.header').style.position = 'relative';
         });
+        input.addEventListener('blur', () => {
+          document.querySelector('.header').style.position = 'sticky';
+        });
 
         const id = `${hour.toString().padStart(2, '0')}${minute
           .toString()
