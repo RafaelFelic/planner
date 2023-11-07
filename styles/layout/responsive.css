@@ -2,7 +2,7 @@
   html,
   body {
     height: 100dvh;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
 
   .header-fix {
