@@ -72,6 +72,16 @@ class Schedule {
         const input = document.createElement('input');
         input.type = 'text';
 
+        // Adiciona evento de foco
+        input.addEventListener('focus', () => {
+          document.body.style.overflow = 'visible';
+        });
+
+        // Adiciona evento de perda de foco (blur)
+        input.addEventListener('blur', () => {
+          document.body.style.overflow = 'hidden'; // Ou o que quer que seja o padrão para sua página
+        });
+
         const id = `${hour.toString().padStart(2, '0')}${minute
           .toString()
           .padStart(2, '0')}${this.currentDate
