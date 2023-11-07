@@ -4,20 +4,21 @@ class Notes {
     this.addNoteBtn = document.querySelector('.add-note-btn');
     this.notesList = document.querySelector('.notes-list');
     this.noteIdCounter = 0;
+
+    this.loadNotesFromLocalStorage();
     this.addNoteBtn.addEventListener('click', () => this.addNewNote());
   }
 
-  addNewNote() {
+  addNewNote(content = '', id = null) {
     this.hideAllNotes();
     const note = document.createElement('div');
     note.classList.add('note');
-    note.dataset.noteId = `note-${this.noteIdCounter++}`;
-    console.log(this.notesList);
+    note.dataset.noteId = id ? id : `note-${this.noteIdCounter++}`;
     note.innerHTML = `
-        <div class="note-content" contenteditable="true"></div>
-        <button class="save-note">Save</button>
-        <button class="delete-note">Delete</button>
-      `;
+          <div class="note-content" contenteditable="true">${content}</div>
+          <button class="save-note">Save</button>
+          <button class="delete-note">Delete</button>
+        `;
     this.notesList.prepend(note);
 
     const noteContent = note.querySelector('.note-content');
@@ -28,6 +29,11 @@ class Notes {
 
     const deleteBtn = note.querySelector('.delete-note');
     deleteBtn.addEventListener('click', () => this.deleteNote(note));
+
+    if (!id) {
+      const noteContent = note.querySelector('.note-content');
+      noteContent.focus();
+    }
   }
 
   saveNote(note) {
@@ -71,6 +77,8 @@ class Notes {
 
     // Mostrar o botão de adicionar uma nova nota novamente.
     this.addNoteBtn.style.display = 'block';
+
+    this.updateLocalStorage();
   }
 
   openNote(noteId) {
@@ -95,12 +103,41 @@ class Notes {
     }
     this.notesList.removeChild(note);
     this.addNoteBtn.style.display = 'block';
+
+    this.updateLocalStorage();
   }
 
   hideAllNotes() {
     const allNotes = this.notesList.querySelectorAll('.note');
     allNotes.forEach((note) => (note.style.display = 'none'));
     this.addNoteBtn.style.display = 'none';
+  }
+
+  updateLocalStorage() {
+    const notesData = Array.from(this.notesList.querySelectorAll('.note')).map(
+      (note) => {
+        const content = note.querySelector('.note-content').innerText;
+        return {
+          id: note.dataset.noteId,
+          content: content,
+        };
+      }
+    );
+
+    localStorage.setItem('notes', JSON.stringify(notesData));
+  }
+
+  loadNotesFromLocalStorage() {
+    const notesData = JSON.parse(localStorage.getItem('notes'));
+    if (notesData) {
+      notesData.forEach((noteData) => {
+        this.noteIdCounter = Math.max(
+          this.noteIdCounter,
+          parseInt(noteData.id.split('-')[1]) + 1
+        );
+        this.addNewNote(noteData.content, noteData.id);
+      });
+    }
   }
 }
 

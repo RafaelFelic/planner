@@ -30,6 +30,18 @@
     margin: 0;
   }
 
+  .notes-list {
+    max-height: calc(
+      100% - 100px
+    ); /* Altura máxima é 100% menos a altura do botão e cabeçalho */
+    overflow: auto;
+  }
+
+  .note-content {
+    min-height: 545px;
+    border-radius: none;
+  }
+
   .todolist {
     position: relative;
     align-content: start;
