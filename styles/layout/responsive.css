@@ -2,7 +2,7 @@
   html,
   body {
     height: 100dvh;
-    /* overflow: hidden; */
+    overflow: hidden;
   }
 
   .header-fix {
@@ -15,6 +15,7 @@
     grid-template-rows: none;
     height: 80%;
     padding: 0 10px;
+    margin-bottom: 60px;
     overflow-y: auto;
     scroll-snap-type: x mandatory;
   }
