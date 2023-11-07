@@ -1,8 +1,8 @@
 @media screen and (max-width: 768px) {
   html,
   body {
-    height: 100vh;
-    /* overflow: hidden; */
+    max-height: 100%;
+    overflow: hidden;
   }
 
   .header-fix {
