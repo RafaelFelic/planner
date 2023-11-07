@@ -1,5 +1,6 @@
 .schedule {
   position: relative;
+  overflow: auto;
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 1;

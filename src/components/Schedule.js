@@ -72,14 +72,6 @@ class Schedule {
         const input = document.createElement('input');
         input.type = 'text';
 
-        input.addEventListener('focus', () => {
-          document.querySelector('.header').style.position = 'relative';
-        });
-        input.addEventListener('blur', () => {
-          document.querySelector('.header').style.position = 'absolute';
-          document.querySelector('.header').style.top = '0';
-        });
-
         const id = `${hour.toString().padStart(2, '0')}${minute
           .toString()
           .padStart(2, '0')}${this.currentDate
