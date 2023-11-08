@@ -1,3 +1,3 @@
 # planner
 
-planner-rafael.netlify.app
+[Planner App](planner-rafael.netlify.app)
