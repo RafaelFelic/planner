@@ -72,9 +72,21 @@ class Schedule {
         const input = document.createElement('input');
         input.type = 'text';
 
+        // input.addEventListener('focus', () => {
+        //   // Ajuste o comportamento e o bloco conforme necessário
+        //   input.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        // });
+
         input.addEventListener('focus', () => {
-          // Ajuste o comportamento e o bloco conforme necessário
-          input.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          if (this.scheduleComponent) {
+            this.scheduleComponent.style.maxHeight = '50vh';
+          }
+        });
+
+        input.addEventListener('blur', () => {
+          if (this.scheduleComponent) {
+            this.scheduleComponent.style.maxHeight = ''; // Aqui você retorna ao valor definido pelo CSS
+          }
         });
 
         const id = `${hour.toString().padStart(2, '0')}${minute
