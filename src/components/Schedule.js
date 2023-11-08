@@ -73,10 +73,8 @@ class Schedule {
         input.type = 'text';
 
         input.addEventListener('focus', () => {
-          document.querySelector('.header').style.position = 'relative';
-        });
-        input.addEventListener('blur', () => {
-          document.querySelector('.header').style.position = 'sticky';
+          // Ajuste o comportamento e o bloco conforme necessário
+          input.scrollIntoView({ behavior: 'smooth', block: 'end' });
         });
 
         const id = `${hour.toString().padStart(2, '0')}${minute
