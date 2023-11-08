@@ -74,7 +74,7 @@ class Schedule {
 
         input.addEventListener('focus', () => {
           // Ajuste o comportamento e o bloco conforme necessário
-          input.scrollIntoView({ behavior: 'smooth', block: 'end' });
+          input.scrollIntoView({ behavior: 'smooth', block: 'center' });
         });
 
         const id = `${hour.toString().padStart(2, '0')}${minute

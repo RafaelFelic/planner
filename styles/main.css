@@ -10,6 +10,7 @@ body {
     cover;
   color: #fff;
   height: 100vh;
+  padding-top: 100px;
 }
 
 @keyframes slideDown {
@@ -32,6 +33,13 @@ body {
 
 .header-fix .weather {
   color: #333;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 header h1 {
