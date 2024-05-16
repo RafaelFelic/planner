@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-# planner
-<<<<<<< HEAD
-=======
-Planner App
->>>>>>> a3e3986060e839bf2c6103ceeef3dc28d3fb3fc5
-=======
+
 # [Planner App](https://planner-rafael.netlify.app)
 
 Welcome to the Planner App repository! Planner App is your go-to all-in-one organization tool designed to help streamline your scheduling, task management, and note-taking, while keeping you updated with live insights on Bitcoin prices and weather conditions. Developed with a sleek interface using HTML, CSS, and JavaScript, and bundled efficiently with Parcel, this app is perfect for individuals looking to manage their day-to-day activities with the added benefit of real-time updates from around the world.
