@@ -1,7 +1,7 @@
 
 # [Planner App](https://plannerweb.vercel.app)
 
-Welcome to the Planner App repository! Planner App is your go-to all-in-one organization tool designed to help streamline your scheduling, task management, and note-taking, while keeping you updated with live insights on Bitcoin prices and weather conditions. Developed with a sleek interface using HTML, CSS, and JavaScript, and bundled efficiently with Parcel, this app is perfect for individuals looking to manage their day-to-day activities with the added benefit of real-time updates from around the world.
+Welcome to the Planner App repository! Planner App is your go-to all-in-one organization tool designed to help streamline your scheduling, task management, and note-taking, while keeping you updated with live insights on Bitcoin prices, some exchange currencies in Reais and weather conditions. Developed with a sleek interface using HTML, CSS, and JavaScript, this app is perfect for individuals looking to manage their day-to-day activities with the added benefit of real-time updates from around the world.
 
 ## Features
 
@@ -10,6 +10,7 @@ Welcome to the Planner App repository! Planner App is your go-to all-in-one orga
 - **Notes**: Keep track of your ideas and notes in one place.
 - **Live Updates**:
   - **Bitcoin Prices**: Stay updated with the latest Bitcoin prices.
+  - **Exchange Currencies**: USD / AUD to BRL.
   - **Weather Conditions**: Check live weather conditions to plan your day better.
  
 ## Project Status
@@ -26,18 +27,13 @@ We welcome contributions and suggestions on how to fix these issues. If you enco
 ## Development Goals and Roadmap
 
 - **Phase 1**: Establish core functionalities including task management, scheduling, and note-taking. [Status: Complete]
-- **Phase 2**: Integrate live updates for Bitcoin prices and weather conditions. [Status: In Progress]
+- **Phase 2**: Integrate live updates for Bitcoin prices, exchange currencies and weather conditions. [Status: In Progress]
 - **Phase 3**: Enhance responsiveness across all devices. [Status: Planned]
 - **Phase 4**: Implement additional features based on user feedback. [Status: Planned]
 
 We aim to address all known issues in Phase 3 of our development. Your feedback and contributions can help us reach these goals faster.
   
 ## Getting Started
-
-### Prerequisites
-
-- Ensure you have the latest version of [Node.js](https://nodejs.org/) installed.
-- Parcel is used for bundling this project. If you haven't installed Parcel, run `npm install -g parcel-bundler`.
 
 ### Installation
 
@@ -49,16 +45,8 @@ We aim to address all known issues in Phase 3 of our development. Your feedback 
 
 ``cd planner-app``
 
-3. Install dependencies:
-
-``npm install``
-
-4. Run the application:
-
-``parcel index.html``
-
-Visit `http://localhost:1234` in your browser to start using the Planner App.
-
+3. Live Server
+   
 ## Usage
 
 - **Adding a Task**: Click on the "Add Task" button to include a new task in your list.
@@ -68,6 +56,7 @@ Visit `http://localhost:1234` in your browser to start using the Planner App.
 ## API Integration
 
 - Bitcoin prices are obtained from `Blockchain.com API`.
+- Exchange currencies from `APIlayer.com`.
 - Weather conditions are pulled from `OpenWeather API`.
 
 ## Contributing
@@ -77,7 +66,5 @@ Contributions are what make the open-source community such an amazing place to l
 Please refer to our [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
 
 ## Acknowledgments
-
-- Parcel for the seamless bundling of our project.
 - All the API providers for making real-time data accessible.
->>>>>>> 95eba21afe2861aa41ec1898c607b5d6af271848
+
