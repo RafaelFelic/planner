@@ -1,0 +1,201 @@
+@media screen and (max-width: 429px) {
+  .todolist,
+  .notes,
+  .schedule {
+    max-height: 74% !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    height: 100vh;
+    padding-bottom: 0;
+  }
+
+  html,
+  body {
+    height: 100svh;
+    overflow: hidden;
+  }
+
+  .header-fix {
+    display: none;
+  }
+
+  .container {
+    display: flex;
+    grid-template-columns: none;
+    grid-template-rows: none;
+    height: 100%;
+    padding: 0 10px;
+    overflow-y: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .todolist,
+  .notes,
+  .schedule {
+    /* flex: 1; */
+    max-height: 85%;
+    overflow-y: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 1);
+    min-width: 100%;
+    margin: 0;
+  }
+
+  .notes-list {
+    max-height: calc(100% - 100px);
+    overflow: auto;
+  }
+
+  .note-content {
+    min-height: 545px;
+    border-radius: none;
+  }
+
+  .todolist {
+    position: relative;
+    align-content: start;
+    justify-content: center;
+  }
+
+  .column {
+    margin: auto;
+  }
+
+  form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px 0 15px;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+  }
+
+  form h1 {
+    width: 100%;
+    font-weight: 500;
+  }
+
+  form input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 0;
+  }
+
+  form button {
+    padding: 6px;
+  }
+
+  input {
+    width: 50%;
+    margin-left: 10px;
+  }
+
+  select {
+    /* height: 35px; */
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    /* font-weight: 500; */
+    margin-left: 10px;
+  }
+
+  .todo {
+    height: 35px;
+    width: 300px;
+    font-size: 1.1rem;
+  }
+
+  .calendar-container {
+    display: none;
+    position: fixed;
+    top: 85px;
+    left: 10px;
+    background-color: #2f4258;
+    color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+  }
+
+  .weather {
+    font-size: 1.2rem;
+  }
+
+  .date {
+    margin-right: 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .slide {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+  }
+
+  .slide-controls {
+    position: absolute;
+    bottom: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+  }
+
+  .dot {
+    height: 5px;
+    width: 5px;
+    margin: 0 5px;
+    background-color: #a1a1a1;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.2s;
+  }
+
+  .dot.active {
+    background-color: #fff;
+    transform: scale(1.6);
+  }
+
+  .info {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem;
+    line-height: 1.5rem;
+    bottom: 30px;
+  }
+
+  .rate,
+  .btc {
+    font-size: 0.9rem;
+    color: lightgreen;
+    letter-spacing: 0.001rem;
+    margin: auto;
+  }
+
+  .clock {
+    display: none;
+  }
+
+  .btc::before {
+    font-size: 0.9rem;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+
+  footer p {
+    background: none;
+    padding: 7px;
+  }
+}

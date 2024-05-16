@@ -1,0 +1,151 @@
+.todolist {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  height: 100%;
+  background: #2f4258;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  position: relative;
+  align-content: start;
+  justify-content: center;
+  overflow: auto;
+}
+
+.column {
+  margin: 10px;
+}
+
+.form {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: inherit;
+}
+
+form {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+form h1 {
+  margin: 9px;
+}
+
+form input {
+  padding: 1rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: none;
+}
+
+form button {
+  padding: 1rem;
+  font-size: 1.2rem;
+  border: none;
+  color: white;
+  background: #db4c3f;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background: white;
+  color: #db4c3f;
+}
+
+select {
+  /* -webkit-appearance: none; */
+  /* -moz-appearance: none; */
+  /* appearance: none; */
+  outline: none;
+  border: none;
+  color: #db4c3f;
+  width: 6.5rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.select {
+  display: flex;
+  margin: 0.5rem;
+  position: relative;
+  /* overflow: hidden; */
+}
+
+.todo {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 10px;
+  width: 320px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  color: black;
+  font-size: 1.3rem;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+span {
+  flex: 1;
+}
+
+.trash-btn,
+.complete-btn,
+.edit-btn {
+  width: 30px;
+  background: none;
+  color: #797979;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.edit-btn:hover {
+  color: #333;
+}
+.trash-btn:hover {
+  color: #a32217;
+}
+.complete-btn:hover {
+  color: green;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.todo-item {
+  padding: 0rem 0.5rem;
+  cursor: pointer;
+}
+
+.todo-item[contentEditable='true'] {
+  border: none;
+  outline: none;
+  cursor: text;
+}
+
+.completed {
+  text-decoration: line-through;
+  background: lightgreen;
+
+  opacity: 0.6;
+}
+
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+.complete-btn.checked {
+  color: rgb(51, 165, 51);
+}

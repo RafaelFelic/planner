@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planner</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>PLANNER</h1>
+      <div class="weather">
+        <span id="suburb_city">Suburb/City</span>
+        <span id="temperature">Temp</span>
+      </div>
+      <div class="date">
+        <span id="current_date">Data</span>
+      </div>
+    </header>
+
+    <main>
+      <section id="todo_list" class="component">
+        <h2>Lista de Tarefas</h2>
+        <input type="text" id="new_task" placeholder="Adicionar nova tarefa" />
+        <button onclick="addTask()">Adicionar</button>
+        <div id="tasks_container">
+          <ul id="tasks_list"></ul>
+        </div>
+      </section>
+      <section id="schedule" class="component">
+        <h2>Agenda</h2>
+
+        <div id="schedule_controls">
+          <button onclick="previousDay()">Dia Anterior</button>
+          <span id="current_date">1 de Janeiro, 2023</span>
+          <button onclick="nextDay()">Próximo Dia</button>
+        </div>
+
+        <div id="events_container">
+          <ul id="events_list"></ul>
+        </div>
+      </section>
+      <section id="notes" class="component">
+        <!-- Notes aqui -->
+      </section>
+    </main>
+
+    <footer>
+      <div class="financial_info">
+        <span id="dollar_rate">Cotação Dólar</span>
+        <span id="btc_rate">Cotação BTC</span>
+      </div>
+      <div class="footer">
+        <p class="copyright"
+          >&copy; 2023
+          <a class="email" target="_blank" href="mailto:rafaelfelic@gmail.com"
+            >Rafael Feliciano</a
+          ></p
+        >
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

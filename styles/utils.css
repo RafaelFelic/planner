@@ -1,0 +1,62 @@
+#weatherDate {
+  place-content: center space-between;
+  align-items: center;
+  height: 30px;
+  margin: 10px;
+  display: flex;
+}
+
+.weather {
+  text-align: left;
+  color: #fff;
+  align-items: center;
+  font-size: 1.5rem;
+  display: flex;
+}
+
+.date {
+  text-align: right;
+  color: #333;
+  margin-right: 20px;
+  font-family: Meow Script, cursive;
+  font-size: 2.5rem;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  position: fixed;
+  bottom: 38px;
+  width: 100%;
+  /* z-index: 1000; */
+}
+
+.info span {
+  color: #fff;
+}
+
+.rate,
+.btc,
+.clock {
+  font-size: 1rem;
+}
+
+.rate {
+  color: lightgreen;
+  letter-spacing: 0.1rem;
+}
+
+.btc {
+  color: lightgreen;
+  letter-spacing: 0.1rem;
+}
+
+.btc::before {
+  color: #fff;
+  font-size: 1.1rem;
+  content: '(BTC) ';
+}

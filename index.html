@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Planner App" />
+    <meta name="keywords" content="planner, schedule, todo, notes" />
+    <meta name="author" content="Rafael Feliciano" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Meow+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="icon" href="/src/planner.ico?v=2" type="image/x-icon" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/notes.css" />
+    <link rel="stylesheet" href="/styles/schedule.css" />
+    <link rel="stylesheet" href="/styles/utils.css" />
+    <link rel="stylesheet" href="/styles/todolist.css" />
+    <link rel="stylesheet" href="/styles/layout/responsive.css" />
+
+    <title>Planner</title>
+  </head>
+  <body>
+    <header>
+      <h1>PLANNER</h1>
+      <div id="weatherDate">
+        <div class="weather"></div>
+        <div class="date"></div>
+      </div>
+    </header>
+    <main class="container">
+      <section class="todolist slide">
+        <div class="form">
+          <form>
+            <h1>To Do List</h1>
+            <label for="new-task" class="sr-only">Add a new task...</label>
+            <input
+              type="text"
+              id="new"
+              placeholder="Add a new task..."
+              autocomplete="off"
+            />
+            <button id="add"><i class="fas fa-plus-square"></i></button>
+            <div class="select" id="filter-container">
+              <label for="filter-tasks" class="sr-only">Filter tasks</label>
+              <select name="todos" class="filter" id="filter-tasks">
+                <option value="all">All</option>
+                <option value="completed">Done</option>
+                <option value="uncompleted">In Progress...</option>
+              </select>
+            </div>
+          </form>
+        </div>
+        <div class="column" id="task-list"></div>
+      </section>
+      <section class="schedule slide">
+        <div class="header">
+          <h2>Plans & Schedules</h2>
+          <div class="calendar">
+            <i class="fa fa-calendar-alt" aria-hidden="true"></i>
+            <div id="current-date"></div>
+          </div>
+          <div class="settings">
+            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+          </div>
+        </div>
+        <ul id="schedule-list"></ul>
+        <div id="calendar-container" class="calendar-container"></div>
+      </section>
+      <section class="notes slide">
+        <div class="notes-header">
+          <h2>Notes</h2>
+        </div>
+        <div class="notes-list" id="notes-list"></div>
+        <button id="add-note" class="add-note-btn"
+          ><i class="fas fa-plus"></i
+        ></button>
+      </section>
+    </main>
+    <div class="slide-controls">
+      <span class="dot" onclick="slideController.setCurrentSlide(1)"></span>
+      <span class="dot" onclick="slideController.setCurrentSlide(2)"></span>
+      <span class="dot" onclick="slideController.setCurrentSlide(3)"></span>
+    </div>
+    <footer>
+      <div class="info">
+        <div class="rate"></div>
+        <div class="btc"></div>
+        <div class="clock"></div>
+      </div>
+      <p class="copyright"
+        >&copy; 2023
+        <a class="email" target="_blank" href="mailto:rafaelfelic@gmail.com"
+          >Rafael Feliciano</a
+        ></p
+      >
+    </footer>
+    <script defer src="/src/App.js" type="module"></script>
+  </body>
+</html>
