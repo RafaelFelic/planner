@@ -1,1 +1,14 @@
 node_modules/
+
+.svelte-kit/
+build/
+.vercel/
+.netlify/
+
+.env
+.env.*
+!.env.example
+
+.DS_Store
+Thumbs.db
+vite.config.*.timestamp-*
